@@ -1,0 +1,11 @@
+ZASADY GRY W BLACKJACK.
+
+Na początku gracz ustala kwotę jaką wpłaca na swoje kasynowe konto.
+Następnie rozpoczyna rozgrywki, przed każdą grą ustala stawkę.
+Gracz i krupier otrzymują po dwie karty. Jeśli żaden z nich nie dobrał 
+dwóch asów, Gracz może podwoić stawkę. Następnie gracz może dobierać karty
+(do momentu aż ich wartość nie przekroczy 21) lub spasować.
+Przegrywa ten, którego karty mają mniejszą wartość, lub wartość ta
+przekroczyła 21 (wyjątek stanowi dobranie dwóch asów w pierwszej kolejce).
+Gracz może kontynować rozgrywki do czasu aż jego saldo nie spadnie poniżej
+5$.
