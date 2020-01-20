@@ -49,7 +49,11 @@ int main()
 		bool playing = true;
 		rozdanie(talia, &pHand, &cHand);
 		table(pHand, cHand, cash, bid, 500);
-		if (!is_there_a_blackjack(pHand, cHand, &cash, bid))double_bid(&bid);
+		if (!is_there_a_blackjack(pHand, cHand, &cash, bid))
+        {
+            double_bid(&bid);
+            table(pHand, cHand, cash, bid, 0);
+        }
 		else playing = false;
 		while (playing)
 		{

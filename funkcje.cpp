@@ -188,11 +188,11 @@ void lose(int* cash, int bid)
 
 void win(int* cash, int bid)
 {
-	cout << "\nWYGRALES!\n";
+	cout << "WYGRALES!\n";
 	*cash += bid;
 };
 
 void draw()
 {
-	cout << "\nREMIS!\n";
+	cout << "REMIS!\n";
 };
