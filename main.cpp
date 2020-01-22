@@ -5,12 +5,15 @@
 #include <Windows.h>
 #include <cstdlib>
 #include <ctime>
+
 using namespace std;
 
 int main()
 {
+    setlocale(LC_ALL,"");
 	srand((unsigned)time(0));
-
+	string nick;
+	int cash=0;
 	string talia[52] = { "2", "2", "2", "2",
 		"3", "3", "3", "3",
 		"4", "4", "4", "4",
@@ -24,35 +27,48 @@ int main()
 		"Q", "Q", "Q", "Q",
 		"K", "K", "K", "K",
 		"A", "A", "A", "A" };
+    char menu_choice = menu();
+    if (menu_choice=='3')
+    {
+        return 0;
+    }
+    if (menu_choice=='4')
+	{
+	    if (load(&nick, &cash)==false)
+        {
+            player_info(&nick, &cash);
+        }
+	}
+	if (menu_choice=='1') player_info(&nick, &cash);
+    string bidding = "O jaka stawkê gramy?: ";
+	int bids[4] {5, 15, 50, 100};
 
-    string bidding = "O jaka stawke gramy?: ";
-    string greeting = "Witaj! Ile pieniedzy chcesz wplacic?: ";
-	int deposits[4] {50, 100, 250, 500};
-	int bids[4] {5, 10, 25, 50};
-	int cash = amount(greeting, deposits);
 	system("cls");
+
 	do {
 		shuffle(talia);
 		string pHand;
 		string cHand;
 		int card_nr = 4;
 		int pPoints = 0;
+
         cout<<"Kasa: "<<cash<<"$\n";
 		int bid = amount(bidding, bids);
+
 		while (bid>cash)
         {
             system("cls");
             cout<<"Kasa: "<<cash<<"$\n";
-            cout<<"Nie mozesz postawic wiecej niz posiadasz!\n";
+            cout<<"Nie mo¿esz postawiæ wiêcej ni¿ posiadasz!\n";
             bid = amount(bidding, bids);
         }
 		bool playing = true;
 		rozdanie(talia, &pHand, &cHand);
-		table(pHand, cHand, cash, bid, 500);
+		table(pHand, cHand, cash, bid, 400, nick);
 		if (!is_there_a_blackjack(pHand, cHand, &cash, bid))
         {
-            double_bid(&bid);
-            table(pHand, cHand, cash, bid, 0);
+            if(cash>=(bid*2)) double_bid(&bid);
+            table(pHand, cHand, cash, bid, 0, nick);
         }
 		else playing = false;
 		while (playing)
@@ -60,7 +76,7 @@ int main()
 			switch (stoi(decision())) {
 			case 1:
 				hit(&card_nr, &pHand, talia, &cash, bid);
-				table(pHand, cHand, cash, bid, 0);
+				table(pHand, cHand, cash, bid, 0, nick);
 				if (value(pHand) > 21)
 				{
 					lose(&cash, bid);
@@ -68,20 +84,20 @@ int main()
 				}
 				break;
 			case 2:
-				stand(&card_nr, &pHand, &cHand, talia, &cash, bid);
+				stand(&card_nr, &pHand, &cHand, talia, &cash, bid, nick);
 				playing = false;
 				break;
 			default:
-				cout << "Wybierz poprawna opcje!\n";
+				cout << "Wybierz poprawna opcjê!\n";
 			}
-
 
 		};
         if (cash<5) break;
 
 	} while (gramy());
+	save(nick, cash);
 
-	cout << "Wychodzisz z kasyna majac "<<cash<<" dolarow!\n\n";
+	cout << "Wychodzisz z kasyna majac "<<cash<<" dolarów!\n\tZapraszamy ponownie!\n";
 	return 0;
 };
 

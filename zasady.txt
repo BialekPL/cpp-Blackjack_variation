@@ -1,11 +1,16 @@
-ZASADY GRY W BLACKJACK.
+	ZASADY GRY W BLACKJACK.
 
-Na poczÄ…tku gracz ustala kwotÄ™ jakÄ… wpÅ‚aca na swoje kasynowe konto.
-NastÄ™pnie rozpoczyna rozgrywki, przed kaÅ¼dÄ… grÄ… ustala stawkÄ™.
-Gracz i krupier otrzymujÄ… po dwie karty. JeÅ›li Å¼aden z nich nie dobraÅ‚ 
-dwÃ³ch asÃ³w, Gracz moÅ¼e podwoiÄ‡ stawkÄ™. NastÄ™pnie gracz moÅ¼e dobieraÄ‡ karty
-(do momentu aÅ¼ ich wartoÅ›Ä‡ nie przekroczy 21) lub spasowaÄ‡.
-Przegrywa ten, ktÃ³rego karty majÄ… mniejszÄ… wartoÅ›Ä‡, lub wartoÅ›Ä‡ ta
-przekroczyÅ‚a 21 (wyjÄ…tek stanowi dobranie dwÃ³ch asÃ³w w pierwszej kolejce).
-Gracz moÅ¼e kontynowaÄ‡ rozgrywki do czasu aÅ¼ jego saldo nie spadnie poniÅ¼ej
-5$.
+Na pocz¹tku gracz ustala kwotê jak¹ wp³aca na swoje kasynowe konto.
+Nastêpnie rozpoczyna rozgrywki, przed ka¿d¹ z nich ustala stawkê.
+Gracz i krupier otrzymuj¹ po dwie karty. Jeœli ¿aden z nich nie dobra³ 
+dwóch asów, Gracz mo¿e podwoiæ stawkê. Nastêpnie gracz mo¿e dobieraæ karty [Hit]
+(do momentu a¿ ich wartoœæ nie przekroczy 21) lub spasowaæ [Stand].
+Przegrywa ten, którego karty maj¹ mniejsz¹ wartoœæ, lub wartoœæ ta
+przekroczy³a 21 (wyj¹tek stanowi dobranie dwóch asów w pierwszej kolejce).
+Gracz mo¿e kontynowaæ rozgrywki do czasu a¿ jego saldo nie spadnie poni¿ej 5$.
+Wartoœci kart : 
+2-9 - wartoœæ kartowa
+D, J, Q, K - 10
+As - 11 lub 1, w zale¿noœci od tego co jest korzystniejsze dla gracza.
+
+(Naciœnij dowolny przycisk...)
